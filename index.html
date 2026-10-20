@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Taller PDF Local</title>
+    <meta
+      name="description"
+      content="Unir, editar, extraer, comprimir y cifrar PDFs sin que ningún archivo salga de tu navegador."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="top">
+        <div class="brand">
+          <div class="glyph">PDF</div>
+          <div>
+            <b>Taller PDF Local</b>
+            <span>Nada de esto sube a ningún servidor</span>
+          </div>
+        </div>
+        <div class="badge"><span class="pulse"></span><span>0 bytes enviados</span></div>
+      </header>
+
+      <div class="cols">
+        <nav class="rail" id="rail" aria-label="Herramientas"></nav>
+        <main class="panel" id="panel"></main>
+      </div>
+
+      <footer>
+        Motor: <code>pdf-lib</code> para estructura de páginas, <code>qpdf</code> compilado a
+        WebAssembly para cifrado AES-256, y <code>pdf.js</code> para miniaturas y rasterizado. Los
+        tres corren dentro de esta pestaña. Puedes abrir la pestaña de red del navegador y comprobar
+        que no sale ningún archivo.
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
